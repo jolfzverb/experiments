@@ -2,8 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 
 project(hello_user VERSION 1.0.0 DESCRIPTION "Hello world shared library consumer")
 
-set(CMAKE_C_FLAGS "-Wall -Werror -pedantic -std=c1z -O2 -fsanitize=address ${CMAKE_C_FLAGS}")
-set(CMAKE_CXX_FLAGS "-Wall -Werror -pedantic -std=c++1z -O2 -fsanitize=address ${CMAKE_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS "-Wall -Werror -pedantic -std=c++1z -O2 -ggdb ${CMAKE_CXX_FLAGS}")
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SHARED_HELLO REQUIRED shared_hello)

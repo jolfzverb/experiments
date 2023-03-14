@@ -3,8 +3,7 @@ include(GNUInstallDirs)
 
 project(shared_hello VERSION 1.0.0 DESCRIPTION "Hello world shared library")
 
-set(CMAKE_C_FLAGS "-Wall -Werror -pedantic -std=c1z -O2 -fsanitize=address ${CMAKE_C_FLAGS}")
-set(CMAKE_CXX_FLAGS "-Wall -Werror -pedantic -std=c++1z -O2 -fsanitize=address ${CMAKE_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS "-Wall -Werror -pedantic -std=c++1z -O2 -ggdb ${CMAKE_CXX_FLAGS}")
 
 include_directories(${CMAKE_SOURCE_DIR})
 
